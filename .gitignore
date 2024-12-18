@@ -3,5 +3,5 @@ client_secrets*
 data/*
 */node_modules/*
 */.env
-
+*/dist/
 */package-lock.json
