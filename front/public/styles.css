@@ -1,0 +1,35 @@
+.body {
+  background-color: #00babe;
+  color: white;
+}
+
+.cloud {
+  position: relative; /* Enables absolute positioning inside */
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+}
+
+.cloud img {
+  width: inherit; /* Makes the image fill the container */
+  object-fit: cover; /* Keeps image aspect ratio */
+}
+
+.center-both {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 200px;
+  background: #c0c0c0;
+}
+
+.centered-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text */
+  color: black; /* Text color for contrast */
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+*/venv/*
+client_secrets*
+data/*
+*/node_modules/*
+*/.env
+
+*/package-lock.json
