@@ -5,3 +5,7 @@ data/*
 */.env
 */dist/
 */package-lock.json
+*/credentials.json
+scripts/*.json
+scripts/*.csv
+*/data/*
