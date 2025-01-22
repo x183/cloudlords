@@ -3,9 +3,10 @@ from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
 import csv
 import json
+from time import time
 
 
-files_to_use = ["e form (Responses)"]
+files_to_use = ["Tea_Responses","Maintenance_Responses","Games_Responses"]
 
 
 def main():
@@ -50,16 +51,16 @@ def read_csv(file_name):
 	return data
 
 def make_json(file_names):
-	data = []
 	for file_name in file_names:
 		file_data = read_csv(file_name)
-		data.append(file_data)
-	write_json("form_data",data)
+		write_json(file_name.split('_')[0].lower(),file_data)
 
 def write_json(file_name,data):
-	with open(f"{file_name}.json", 'w', encoding='utf-8') as jsonf:
+	base_path = "../back/data/"
+	with open(f"{base_path}{file_name}.json", 'w', encoding='utf-8') as jsonf:
 		jsonf.write(json.dumps(data, indent=4))
-
+	with open(f"{base_path}fetchTime.txt","w",encoding='utf-8') as textf:
+		textf.write(str(int(time())))
 
 if __name__ == "__main__":
 	main()

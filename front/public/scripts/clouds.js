@@ -28,6 +28,8 @@ function getClouds() {
 }
 
 async function fetchCloudData() {
-  const cloudJSON = await fetch("http://localhost:8000/clouds/allClouds");
+  const cloudJSON = await fetch(
+    "http://localhost:3000/backend/clouds/allClouds"
+  );
   return cloudJSON.json();
 }

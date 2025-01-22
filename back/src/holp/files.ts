@@ -8,6 +8,14 @@ const readJSON = (fileName: string) => {
 		return [];
 	}
 }
+const readText = (fileName: string) => {
+	try {
+		return readFile(`${fileName}.txt`).split("\n");
+	}
+	catch (e) {
+		return [];
+	}
+}
 
 const readFile = (fileName: string) => {
 	try {
@@ -19,5 +27,6 @@ const readFile = (fileName: string) => {
 }
 
 export {
-	readJSON
+	readJSON,
+	readText,
 }
